@@ -18,6 +18,25 @@ app.post('/students', (req, res) => {
   res.json(student)
 })
 
+app.put('/students/:id', (req, res) => {
+  const studentId = req.params.id;
+  const student = req.body;
+  const index = students.findIndex(student => student.id === Number(studentId));
+  if (index !== -1) {
+    students.splice(index, 1, student);
+  }
+  res.json(student)
+})
+
+app.delete('/students/:id', (req, res) => {
+  const studentId = req.params.id;
+  const index = students.findIndex(student => student.id === Number(studentId));
+  if (index !== -1) {
+    students.splice(index, 1);
+  }
+  res.json({success: true})
+})
+
 app.get('/students', (req, res) => {
   res.json(students)
 })
