@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 
 app.post('/students', (req, res) => {
   const student = req.body;
+  student.id = students.length + 1;
   students.push(student);
   res.json(student)
 })
