@@ -18,7 +18,7 @@ export default function StudentForm({ onStudentAdd }) {
   };
 
   return (
-    <form>
+    <form className="my-5">
       <div className="py-4">
         <label htmlFor="name">Name</label>
         <input
@@ -27,7 +27,7 @@ export default function StudentForm({ onStudentAdd }) {
           id="name"
           value={formData.name}
           onChange={handleChange}
-          className="border"
+          className="input"
         />
       </div>
       <div className="py-4">
@@ -38,7 +38,7 @@ export default function StudentForm({ onStudentAdd }) {
           id="dob"
           value={formData.dob}
           onChange={handleChange}
-          className="border"
+          className="input"
         />
       </div>
       <div className="py-4">
@@ -65,7 +65,7 @@ export default function StudentForm({ onStudentAdd }) {
         </label>
       </div>
 
-      <button type="submit" onClick={handleSubmit}>
+      <button type="submit" onClick={handleSubmit} className="button">
         Submit
       </button>
     </form>

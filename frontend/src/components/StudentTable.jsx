@@ -9,7 +9,7 @@ export default function StudentTable({students, onStudentDelete}) {
 
   return (
     <>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Id</th>

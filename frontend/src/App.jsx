@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       <StudentForm onStudentAdd={handleStudentAdd}/>
+      <hr />
       <StudentTable students={students} onStudentDelete={loadStudents}/>
     </>
   )
