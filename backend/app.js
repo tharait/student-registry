@@ -16,7 +16,7 @@ app.post('/students', (req, res) => {
   const student = req.body;
   student.id = students.length + 1;
   students.push(student);
-  res.json(student)
+  setTimeout(() => res.json(student), 5000);
 })
 
 app.put('/students/:id', (req, res) => {
@@ -39,7 +39,13 @@ app.delete('/students/:id', (req, res) => {
 })
 
 app.get('/students', (req, res) => {
-  res.json(students)
+  setTimeout(() => res.json(students), 5000);
+})
+
+app.get('/students/:id', (req, res) => {
+  const studentId = req.params.id;
+  const student = students.find(student => student.id === Number(studentId));
+  setTimeout(() => res.json(student), 5000);
 })
 
 app.listen(port, () => {
