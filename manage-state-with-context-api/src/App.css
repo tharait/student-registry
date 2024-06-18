@@ -1,0 +1,11 @@
+.player {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+  display: inline-block;
+}
+
+.winner {
+  background-color: greenyellow;
+}
