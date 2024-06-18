@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function StudentList() {
   const [students, setStudents] = useState([]);
@@ -37,12 +38,12 @@ export default function StudentList() {
 
 function StudentListItem({student}) {
   return (
-    <a href={`/students/detail/${student.id}`}>
+    <Link to={`/students/detail/${student.id}`}>
     <div>
         <div>{student.name}</div>
         <div>{student.dob} {student.gender}</div>
     </div>
-    </a>
+    </Link>
   )
 }
 
